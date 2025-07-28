@@ -1,33 +1,22 @@
 import React from 'react';
 import { Calendar, TrendingUp, Users, Award } from 'lucide-react';
 
-// IMPORTANT: When images are in the 'public' folder, you access them
-// directly from the root of your application's URL path.
-// You DO NOT import them as modules (like you would from 'src').
-// Instead, you use their direct path relative to the 'public' folder.
-
-// No import statements needed for images from 'public' folder.
-// The paths will be directly used in the <img> src attribute.
-
-// Define an interface for a Project
 interface Project {
   name: string;
   description: string;
-  logo: string | null; // logo will be a string (public path) or null
+  logo: string | null;
   achievement: string;
-  website: string | null; // website can be a string (URL) or null
+  website: string | null;
 }
 
-// Define an interface for an Experience item
 interface ExperienceItem {
   title: string;
   period: string;
-  icon: JSX.Element; // icon is a React element
-  projects: Project[]; // projects is an array of Project
+  icon: JSX.Element;
+  projects: Project[];
 }
 
 const Experience: React.FC = () => {
-  // Explicitly type the 'experiences' array using the ExperienceItem interface
   const experiences: ExperienceItem[] = [
     {
       title: "Senior Digital Marketing",
@@ -37,34 +26,34 @@ const Experience: React.FC = () => {
         {
           name: "ONYX OSLO",
           description: "Helped this international jewelry brand establish an online presence on social media, leading to a successful start and reaching up to PKR 500K in sales",
-          // Use the path relative to the 'public' folder
-          logo: '../public/OnyxOslo.png',
+          // CORRECT: Use the path directly from the root (leading slash)
+          logo: '/OnyxOslo.png', // Changed from '../public/OnyxOslo.png'
           achievement: "PKR 500K in sales",
-          website: "https://www.casestudyonyxoslobyrealshahzaib.vercel.app/"
+          website: "https://casestudyonyxoslobyrealshahzaib.vercel.app/"
         },
         {
           name: "Iron Artistry",
           description: "Achieved 1 Million PKR in sales in a month. Currently handling their social media campaign",
-          // Use the path relative to the 'public' folder
-          logo: '../public/IronArtistry.png',
+          // CORRECT: Use the path directly from the root (leading slash)
+          logo: '/IronArtistry.png', // Changed from '../public/IronArtistry.png'
           achievement: "1M PKR in 1 month",
-          website: "https://www.casestudyironartistrybyrealshahzaib.vercel.app/"
+          website: "https://casestudyironartistrybyrealshahzaib.vercel.app/"
         },
         {
           name: "Products Plaza",
           description: "Built from scratch and achieved 1 Million+ PKR in sales. Currently handling their social media campaign",
-          // Use the path relative to the 'public' folder
-          logo: '../public/ProductPlaza.png',
+          // CORRECT: Use the path directly from the root (leading slash)
+          logo: '/ProductPlaza.png', // Changed from '../public/ProductPlaza.png'
           achievement: "1M+ PKR in sales",
-          website: "https://www.casestudyproductsplazabyrealshahzaib.vercel.app/"
+          website: "https://casestudyproductsplazabyrealshahzaib.vercel.app/"
         },
         {
           name: "Alzeon Motors",
           description: "Strategic brand development and digital marketing campaigns",
-          // Use the path relative to the 'public' folder
-          logo: './public/AlzeonMotors.png', // Note: Spaces in filenames can sometimes cause issues; consider renaming if problems persist.
+          // CORRECT: Use the path directly from the root (leading slash)
+          logo: '/AlzeonMotors.png', // Changed from './public/AlzeonMotors.png'
           achievement: "Brand Development",
-          website: "https://www.casestudyalzeonmotorsbyrealshahzaib.vercel.app/"
+          website: "https://casestudyalzeonmotorsbyrealshahzaib.vercel.app/"
         }
       ]
     },
@@ -132,7 +121,7 @@ const Experience: React.FC = () => {
                           {project.logo ? (
                             <div className="w-16 h-16 rounded-lg overflow-hidden bg-white p-2 flex-shrink-0">
                               <img
-                                src={project.logo} // Directly use the public path here
+                                src={project.logo} // This is where the corrected path is used
                                 alt={`${project.name} logo`}
                                 className="w-full h-full object-contain"
                               />

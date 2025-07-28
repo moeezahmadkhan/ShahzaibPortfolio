@@ -5,29 +5,22 @@ const Certifications = () => {
   const certifications = [
     {
       title: "Advanced Digital Marketing Program",
-      institution: "NIAIS",
-      date: "June 1, 2023",
+      institution: "NIAIS (Arfa Tower Lahore)",
+      date: "Certified: June 1, 2023",
       icon: <GraduationCap className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Digital Marketing Certification",
-      institution: "Arfa Tower Lahore",
-      date: "Certified Professional",
-      icon: <Award className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Student of IDM Pakistan",
+      title: "Certified by IDM Pakistan",
       institution: "Institute of Digital Marketing",
-      date: "Ongoing Education",
+      date: "Certified Expert",
       icon: <BookOpen className="w-6 h-6" />,
       color: "from-purple-500 to-violet-500"
     },
     {
-      title: "AI Agents & AI Integration",
+      title: "AI Strategy & Integration Expert",
       institution: "Digital Marketing Specialization",
-      date: "Currently Learning",
+      date: "Certified & Proficient",
       icon: <Brain className="w-6 h-6" />,
       color: "from-amber-500 to-yellow-500"
     }
@@ -39,21 +32,28 @@ const Certifications = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
-              Certifications & Education
+              Certifications & Expertise
             </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-yellow-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Continuous learning and professional development in digital marketing and emerging technologies.
+            A testament to continuous learning and cutting-edge expertise in digital marketing and AI.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
+          {/* Modified Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-amber-400/50 transition-all duration-300 hover:transform hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                // Apply col-span-2 and justify-self-center only to the last item
+                className={`
+                  bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700
+                  hover:border-amber-400/50 transition-all duration-300 hover:transform hover:-translate-y-2
+                  shadow-lg hover:shadow-xl
+                  ${index === certifications.length - 1 ? 'md:col-span-2 md:justify-self-center md:max-w-2xl' : ''}
+                `}
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className={`p-3 bg-gradient-to-br ${cert.color} rounded-lg text-white`}>
@@ -82,9 +82,7 @@ const Certifications = () => {
               Commitment to Excellence
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              I believe in continuous learning and staying ahead of industry trends. Currently expanding 
-              my expertise in AI agents and AI integration in digital marketing to provide cutting-edge 
-              solutions for modern businesses.
+              My journey involves continuous learning and proactive adoption of emerging technologies. I am a certified expert in AI integration, adept at utilizing new AI tools to craft cutting-edge digital marketing strategies and provide highly effective solutions for modern businesses.
             </p>
           </div>
         </div>
