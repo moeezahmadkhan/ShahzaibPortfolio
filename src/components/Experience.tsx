@@ -26,51 +26,47 @@ const Experience: React.FC = () => {
         {
           name: "ONYX OSLO",
           description: "Helped this international jewelry brand establish an online presence on social media, leading to a successful start and reaching up to PKR 500K in sales",
-          // CORRECT: Use the path directly from the root (leading slash)
-          logo: '/OnyxOslo.png', // Changed from '../public/OnyxOslo.png'
-          achievement: "PKR 500K in sales",
+          logo: '/OnyxOslo.jpg',
+          achievement: "PKR 500K in 1 month",
           website: "https://casestudyonyxoslobyrealshahzaib.vercel.app/"
         },
         {
           name: "Iron Artistry",
           description: "Achieved 1 Million PKR in sales in a month. Currently handling their social media campaign",
-          // CORRECT: Use the path directly from the root (leading slash)
-          logo: '/IronArtistry.png', // Changed from '../public/IronArtistry.png'
+          logo: '/IronArtistry.jpg',
           achievement: "1M PKR in 1 month",
           website: "https://casestudyironartistrybyrealshahzaib.vercel.app/"
         },
         {
           name: "Products Plaza",
           description: "Built from scratch and achieved 1 Million+ PKR in sales. Currently handling their social media campaign",
-          // CORRECT: Use the path directly from the root (leading slash)
-          logo: '/ProductPlaza.png', // Changed from '../public/ProductPlaza.png'
+          logo: '/ProductPlaza.jpg',
           achievement: "1M+ PKR in sales",
           website: "https://casestudyproductsplazabyrealshahzaib.vercel.app/"
         },
         {
           name: "Alzeon Motors",
           description: "Strategic brand development and digital marketing campaigns",
-          // CORRECT: Use the path directly from the root (leading slash)
-          logo: '/AlzeonMotors.png', // Changed from './public/AlzeonMotors.png'
+          logo: '/AlzeonMotors.jpg',
           achievement: "Brand Development",
           website: "https://casestudyalzeonmotorsbyrealshahzaib.vercel.app/"
         }
       ]
     },
-    {
-      title: "Junior Digital Marketing",
-      period: "June 2022 - 2024",
-      icon: <TrendingUp className="w-6 h-6" />,
-      projects: [
-        {
-          name: "Multiple Brands/Startups",
-          description: "Worked with multiple Brands/Startups in Pakistan, managing teams and handling social media. Increased client and customer engagement through strategic product marketing",
-          logo: null,
-          achievement: "50% efficiency increase",
-          website: null
-        }
-      ]
-    }
+    // {
+    //   title: "Junior Digital Marketing",
+    //   period: "June 2022 - 2024",
+    //   icon: <TrendingUp className="w-6 h-6" />,
+    //   projects: [
+    //     {
+    //       name: "Multiple Brands/Startups",
+    //       description: "Worked with multiple Brands/Startups in Pakistan, managing teams and handling social media. Increased client and customer engagement through strategic product marketing",
+    //       logo: null,
+    //       achievement: "50% efficiency increase",
+    //       website: null
+    //     }
+    //   ]
+    // }
   ];
 
   return (
@@ -119,15 +115,17 @@ const Experience: React.FC = () => {
                       >
                         <div className="flex items-start gap-4 mb-4">
                           {project.logo ? (
-                            <div className="w-16 h-16 rounded-lg overflow-hidden bg-white p-2 flex-shrink-0">
+                            // Removed p-1 from here
+                            <div className="w-24 h-24 rounded-lg overflow-hidden bg-white flex-shrink-0 border-2 border-amber-400 shadow-lg">
                               <img
-                                src={project.logo} // This is where the corrected path is used
+                                src={project.logo}
                                 alt={`${project.name} logo`}
-                                className="w-full h-full object-contain"
+                                className="w-full h-full object-cover" // object-cover is still appropriate for 1024x1024 images in a square frame
                               />
                             </div>
                           ) : (
-                            <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center text-black font-bold text-lg flex-shrink-0">
+                            // Removed p-1 from here for consistency
+                            <div className="w-24 h-24 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center text-black font-bold text-xl flex-shrink-0 border-2 border-amber-400 shadow-lg">
                               {project.name.split(' ').map(word => word[0]).join('')}
                             </div>
                           )}
