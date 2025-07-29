@@ -42,7 +42,7 @@ const Experience: React.FC = () => {
           description: "Built from scratch and achieved 1 Million+ PKR in sales. Currently handling their social media campaign",
           logo: '/ProductPlaza.jpg',
           achievement: "1M+ PKR in sales",
-          website: "https://casestudyproductsplazabyrealshahzaib.vercel.app/"
+          website: "https://casestudyproductsplazabyrealshahzai.vercel.app/"
         },
         {
           name: "Alzeon Motors",
