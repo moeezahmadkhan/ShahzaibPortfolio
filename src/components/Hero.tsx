@@ -47,8 +47,8 @@ const Hero: React.FC = () => {
 
         <div className="max-w-4xl mx-auto">
           <p className="text-xl text-gray-300 leading-relaxed mb-8">
-Delivering Growth for Over 5 Years: RS Agency
-As a digital marketing and lead strategist with five years of experience, data is leveraged to deliver comprehensive marketing solutions and boost sales efficiency by up to 50% for startups worldwide. The scalable team provides personalized, results-focused strategies that solve your toughest marketing challenges.          </p>
+RS Agency : 5+ Years of Turning Startups Into Sales Machines.
+We don’t just market, we weaponize data to boost growth by up to 50%. </p>
 
           <a
             href={whatsappLink}
