@@ -37,7 +37,7 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium"
+                className="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium about-glow-on-hover"
               >
                 {item}
               </button>
@@ -46,7 +46,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white glow-effect glow-on-hover p-1 rounded" // Added glow classes here
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -61,7 +61,7 @@ const Header = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium text-left"
+                  className="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium text-left about-glow-on-hover"
                 >
                   {item}
                 </button>

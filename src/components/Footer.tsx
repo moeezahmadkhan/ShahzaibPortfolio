@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Copyright text block */}
         <div className="mb-4 md:mb-0"> {/* No need for text-center here if parent has it */}
           <p className="text-gray-400">
-            © 2025 Shahzaib Azeem. All rights reserved.
+            © 2025 Real Shahzaib. All rights reserved.
           </p>
         </div>
 

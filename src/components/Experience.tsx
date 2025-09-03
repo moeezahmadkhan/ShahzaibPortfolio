@@ -12,22 +12,22 @@ interface Project {
 interface ExperienceItem {
   title: string;
   period: string;
-  icon: JSX.Element;
+  icon: JSX.Element | null;
   projects: Project[];
 }
 
 const Experience: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
-      title: "Senior Digital Marketing",
-      period: "September 2024 - Present",
-      icon: <Award className="w-6 h-6" />,
+      title: "Portfolio",
+      period: "Our Success Stories and Brand",
+      icon: null,
       projects: [
         {
           name: "ONYX OSLO",
-          description: "Helped this international jewelry brand establish an online presence on social media, leading to a successful start and reaching up to PKR 500K in sales",
+          description: "Helped this international jewelry brand establish an online presence on social media, leading to a successful start and reaching up to $500K in sales",
           logo: '/OnyxOslo.jpg',
-          achievement: "PKR 500K in 1 month",
+          achievement: "$500K in 3 month",
           website: "https://casestudyonyxoslobyrealshahzaib.vercel.app/"
         },
         {
@@ -46,7 +46,7 @@ const Experience: React.FC = () => {
         },
         {
           name: "Alzeon Motors",
-          description: "Strategic brand development and digital marketing campaigns",
+          description: "Complete Brand Development: We handled their full branding, including logo, banners, posters, and comprehensive roadmapping and budgeting.",
           logo: '/AlzeonMotors.jpg',
           achievement: "Brand Development",
           website: "https://casestudyalzeonmotorsbyrealshahzaib.vercel.app/"
@@ -90,15 +90,20 @@ const Experience: React.FC = () => {
               <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 overflow-hidden">
                 <div className="p-8 border-b border-gray-700">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-lg text-black">
-                      {exp.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
-                      <div className="flex items-center gap-2 text-amber-400">
-                        <Calendar className="w-4 h-4" />
-                        <span className="font-medium">{exp.period}</span>
+                    {exp.icon && (
+                      <div className="p-3 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-lg text-black">
+                        {exp.icon}
                       </div>
+                    )}
+                    <div>
+                      {exp.title && (
+                        <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
+                      )}
+                      {exp.period && (
+                        <div className="flex items-center gap-2 text-amber-400">
+                          <span className="font-medium">{exp.period}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -115,16 +120,14 @@ const Experience: React.FC = () => {
                       >
                         <div className="flex items-start gap-4 mb-4">
                           {project.logo ? (
-                            // Removed p-1 from here
                             <div className="w-24 h-24 rounded-lg overflow-hidden bg-white flex-shrink-0 border-2 border-amber-400 shadow-lg">
                               <img
                                 src={project.logo}
                                 alt={`${project.name} logo`}
-                                className="w-full h-full object-cover" // object-cover is still appropriate for 1024x1024 images in a square frame
+                                className="w-full h-full object-cover"
                               />
                             </div>
                           ) : (
-                            // Removed p-1 from here for consistency
                             <div className="w-24 h-24 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center text-black font-bold text-xl flex-shrink-0 border-2 border-amber-400 shadow-lg">
                               {project.name.split(' ').map(word => word[0]).join('')}
                             </div>

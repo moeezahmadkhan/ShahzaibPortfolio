@@ -26,14 +26,14 @@ const Contact: React.FC = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      value: "+92 3254252605",
-      link: "tel:+923254252605"
+      value: "+92 3390084791",
+      link: "tel:+9232390084791"
     },
     {
       icon: <MessageCircle className="w-6 h-6" />,
       title: "WhatsApp",
-      value: "+92 325 4252605",
-      link: "https://wa.me/923254252605"
+      value: "+92 339 0084791",
+      link: "https://wa.me/923390084791"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
       icon: <Instagram className="w-6 h-6" />,
       name: "Instagram",
       handle: "@realshahzaibcom",
-      link: "https://instagram.com/realshahzaibcom"
+      link: "https://instagram.com/shahzaib_marketer"
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
@@ -76,19 +76,20 @@ const Contact: React.FC = () => {
 
         {/* Main container for the unified contact and social info */}
         <div className="max-w-xl mx-auto bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-10 rounded-xl border border-gray-700 shadow-2xl">
-          <h3 className="text-3xl font-bold text-white mb-8 text-center"> {/* Centered heading */}
+          <h3 className="text-3xl font-bold text-white mb-8 text-center">
             Connect With Me
           </h3>
 
           {/* Contact Information */}
-          <div className="space-y-6 mb-10"> {/* Adjusted margin-bottom */}
+          <div className="space-y-6 mb-10">
             {contactInfo.map((info, index) => (
-              <div key={index} className="flex items-center gap-4 group"> {/* Added group for hover effects */}
-                <div className="p-3 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-lg text-black flex-shrink-0 transition-transform duration-200 group-hover:scale-110">
+              <div key={index} className="flex items-center gap-4 group">
+                {/* Applied glow-effect to the icon container */}
+                <div className="p-3 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-lg text-black flex-shrink-0 transition-transform duration-200 group-hover:scale-110 glow-effect glow-on-hover">
                   {info.icon}
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold text-lg">{info.title}</h4> {/* Larger title */}
+                  <h4 className="text-white font-semibold text-lg">{info.title}</h4>
                   {info.link ? (
                     <a
                       href={info.link}
@@ -107,14 +108,14 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Social Links */}
-          <div className="pt-8 border-t border-gray-700"> {/* Separator for social links */}
-            <h4 className="text-2xl font-semibold text-white mb-6 text-center">Follow My Journey</h4> {/* New heading for social */}
-            <div className="flex gap-6 justify-center"> {/* Increased gap */}
+          <div className="pt-8 border-t border-gray-700">
+            <h4 className="text-2xl font-semibold text-white mb-6 text-center">Follow My Journey</h4>
+            <div className="flex gap-6 justify-center">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.link}
-                  className="p-4 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg text-amber-400 hover:from-amber-500 hover:to-yellow-600 hover:text-black transition-all duration-300 hover:transform hover:-translate-y-2 shadow-md hover:shadow-lg flex items-center justify-center" // Larger padding, better shadow
+                  className="p-4 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg text-amber-400 hover:from-amber-500 hover:to-yellow-600 hover:text-black transition-all duration-300 hover:transform hover:-translate-y-2"
                   title={`${social.name}: ${social.handle}`}
                   target="_blank"
                   rel="noopener noreferrer"

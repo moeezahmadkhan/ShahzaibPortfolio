@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Services from './components/Services'; // Import the new Samples component
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
       <Header />
       <Hero />
       <About />
-      {/* <Skills /> */}
       <Experience />
+      <Services />
+      <Skills />
       <Certifications />
       <Contact />
       <Footer />

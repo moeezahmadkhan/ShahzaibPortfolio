@@ -6,7 +6,7 @@ const About = () => {
     {
       icon: <Target className="w-8 h-8" />,
       title: "Performance Marketing Expert",
-      description: "4+ years of experience in strategic digital marketing campaigns"
+      description: "5+ years of experience in strategic digital marketing campaigns"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
@@ -38,14 +38,9 @@ const About = () => {
         </div>
 
         <div className="max-w-4xl mx-auto mb-16">
-          <p className="text-xl text-gray-300 leading-relaxed text-center mb-8">
-            As an energetic digital marketing professional, I bring over 4 years of experience in 
-            performance marketing and lead strategist roles. My expertise lies in Social Media Marketing, 
-            and I'm particularly skilled in sales strategies that drive real results.
-          </p>
           <p className="text-lg text-gray-400 leading-relaxed text-center">
-            I have a proven track record of helping multiple startups increase their sales efficiency 
-            by almost 50% by implementing effective, data-driven strategies. My specialty is reviving 
+            We have a proven track record of helping multiple startups increase their sales efficiency 
+            by almost 50% by implementing effective, data-driven strategies. Our specialty is reviving 
             brands and helping them grow and scale in today's competitive digital landscape.
           </p>
         </div>
