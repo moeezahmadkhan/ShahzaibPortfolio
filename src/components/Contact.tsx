@@ -57,6 +57,15 @@ const Contact: React.FC = () => {
       link: "https://www.linkedin.com/in/shahzaib-azeem-18aa75267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     }
   ];
+  
+  const services = [
+    "PERFORMANCE MARKETING",
+    "WEBSITE DEVELOPMENT",
+    "GRAPHIC DESIGNING",
+    "VIDEO EDITING",
+    "SEARCH ENGINE OPTIMIZATION",
+    "ECOMMERCE PACKAGE"
+  ];
 
   return (
     <section id="contact" className="py-20 px-6">
@@ -74,17 +83,82 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        {/* Main container for the unified contact and social info */}
         <div className="max-w-xl mx-auto bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-10 rounded-xl border border-gray-700 shadow-2xl">
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
-            Connect With Me
+            Connect With Us
           </h3>
 
-          {/* Contact Information */}
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            className="space-y-6 mb-10"
+          >
+            <input type="hidden" name="apikey" value="f605c0a5-be9b-4449-9e32-41d07e3be1b9" />
+            
+            <div>
+              <label htmlFor="name" className="text-white">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your Name"
+                className="w-full mt-2 p-3 bg-gray-900 text-white rounded-md border border-gray-700 focus:outline-none focus:border-amber-400"
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="email" className="text-white">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Your Email"
+                className="w-full mt-2 p-3 bg-gray-900 text-white rounded-md border border-gray-700 focus:outline-none focus:border-amber-400"
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="service" className="text-white">Service Required</label>
+              <select
+                id="service"
+                name="service"
+                required
+                className="w-full mt-2 p-3 bg-gray-900 text-white rounded-md border border-gray-700 focus:outline-none focus:border-amber-400"
+              >
+                <option value="">-- Select a Service --</option>
+                {services.map((service, index) => (
+                  <option key={index} value={service}>
+                    {service}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="message" className="text-white">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={4}
+                placeholder="Your Message"
+                className="w-full mt-2 p-3 bg-gray-900 text-white rounded-md border border-gray-700 focus:outline-none focus:border-amber-400"
+              ></textarea>
+            </div>
+            
+            <button
+              type="submit"
+              className="w-full py-3 px-6 bg-gradient-to-r from-amber-500 to-yellow-600 text-black font-semibold rounded-md transition-all duration-300 hover:from-amber-400 hover:to-yellow-500 hover:shadow-lg"
+            >
+              Send Message
+            </button>
+          </form>
+
           <div className="space-y-6 mb-10">
             {contactInfo.map((info, index) => (
               <div key={index} className="flex items-center gap-4 group">
-                {/* Applied glow-effect to the icon container */}
                 <div className="p-3 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-lg text-black flex-shrink-0 transition-transform duration-200 group-hover:scale-110 glow-effect glow-on-hover">
                   {info.icon}
                 </div>
@@ -107,7 +181,6 @@ const Contact: React.FC = () => {
             ))}
           </div>
 
-          {/* Social Links */}
           <div className="pt-8 border-t border-gray-700">
             <h4 className="text-2xl font-semibold text-white mb-6 text-center">Follow My Journey</h4>
             <div className="flex gap-6 justify-center">
