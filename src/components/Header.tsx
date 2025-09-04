@@ -5,6 +5,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Define the navigation items in a single array
+  const navItems = ['About', 'Experience', 'Services', 'Certifications', 'Contact'];
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -33,7 +36,7 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {['About', 'Experience', 'Certifications', 'Contact'].map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -46,7 +49,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white glow-effect glow-on-hover p-1 rounded" // Added glow classes here
+            className="md:hidden text-white glow-effect glow-on-hover p-1 rounded"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -57,7 +60,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-700">
             <div className="flex flex-col space-y-4 pt-4">
-              {['About', 'Experience', 'Certifications', 'Contact'].map((item) => (
+              {navItems.map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
