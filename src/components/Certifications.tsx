@@ -4,6 +4,20 @@ import { GraduationCap, Award, BookOpen, Brain } from 'lucide-react';
 const Certifications = () => {
   const certifications = [
     {
+      title: "Certified by Google",
+      institution: "Google",
+      date: "Certified: June 1, 2024", // Example date
+      icon: <Award className="w-6 h-6" />,
+      color: "from-blue-500 to-green-500" // Example colors for Google
+    },
+    {
+      title: "Certified by Meta",
+      institution: "Meta",
+      date: "Certified: May 15, 2024", // Example date
+      icon: <Award className="w-6 h-6" />,
+      color: "from-blue-600 to-sky-400" // Example colors for Meta
+    },
+    {
       title: "Advanced Digital Marketing Program",
       institution: "NIAIS (Arfa Tower Lahore)",
       date: "Certified: June 1, 2023",
@@ -92,3 +106,6 @@ const Certifications = () => {
 };
 
 export default Certifications;
+
+// This video explains how to use the `map()` function to render lists in React, which is a core concept used in your code. [How to Render Lists Using map() in React](https://www.youtube.com/watch?v=skMXlZfX8qo)
+// http://googleusercontent.com/youtube_content/0

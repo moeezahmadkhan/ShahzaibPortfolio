@@ -5,33 +5,33 @@ const Services: React.FC = () => {
   const services = [
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Performance Marketing",
-      description: "Boosting sales and ROI through data-driven campaigns."
+      title: "PERFORMANCE MARKETING",
+      description: "We don’t just run ads, we print sales."
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Website Development",
-      description: "Building modern, responsive, and user-friendly websites."
+      title: "WEBSITE DEVELOPMENT",
+      description: "We turn websites into 24/7 profit machines."
     },
     {
       icon: <PenTool className="w-8 h-8" />,
-      title: "Graphic Designing",
-      description: "Creating stunning visuals for branding and marketing materials."
+      title: "GRAPHIC DESIGNING",
+      description: "Designs that speak louder than ads."
     },
     {
       icon: <Film className="w-8 h-8" />,
-      title: "Video Editing",
-      description: "Producing high-quality videos for social media and advertisements."
+      title: "VIDEO EDITING",
+      description: "Stories that hook minds & hijack attention."
     },
     {
       icon: <Search className="w-8 h-8" />,
-      title: "Search Engine Optimization",
-      description: "Optimizing content to improve search engine rankings and visibility."
+      title: "SEARCH ENGINE OPTIMIZATION",
+      description: "Rank higher, earn trust faster, sell easier."
     },
     {
       icon: <ShoppingCart className="w-8 h-8" />,
-      title: "Ecommerce Package",
-      description: "Comprehensive solutions for launching and managing online stores."
+      title: "ECOMMERCE PACKAGE",
+      description: "From product to profit, we design stores that hypnotize wallets."
     }
   ];
 
