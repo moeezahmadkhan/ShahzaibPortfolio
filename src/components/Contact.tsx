@@ -48,13 +48,25 @@ const Contact: React.FC = () => {
       icon: <Instagram className="w-6 h-6" />,
       name: "Instagram",
       handle: "@realshahzaibcom",
-      link: "https://instagram.com/shahzaib_marketer"
+      link: "https://www.instagram.com/realshahzaibcom"
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       name: "LinkedIn",
       handle: "Shahzaib Azeem",
       link: "https://www.linkedin.com/in/shahzaib-azeem-18aa75267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-tiktok w-6 h-6" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M21 7.917v4.034a1 1 0 0 1 -.865 .987l-6.643 .574l-.255 -2.713v-4.664" />
+          <path d="M12 20.985v-4.654a2.025 2.025 0 0 0 -2.02 -2.023c-1.296 -.003 -1.865 .165 -2.713 .647a2.025 2.025 0 0 0 -1.022 1.488v2.531c0 1.25 .833 2.5 2.5 2.5a2.502 2.502 0 0 0 2.5 -2.5z" />
+        </svg>
+      ),
+      name: "TikTok",
+      handle: "@realshahzaib.com",
+      link: "https://www.tiktok.com/@realshahzaib.com"
     }
   ];
   
@@ -103,6 +115,17 @@ const Contact: React.FC = () => {
                 name="name"
                 required
                 placeholder="Your Name"
+                className="w-full mt-2 p-3 bg-gray-900 text-white rounded-md border border-gray-700 focus:outline-none focus:border-amber-400"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="phone" className="text-white">Phone (WhatsApp)</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your Phone Number"
                 className="w-full mt-2 p-3 bg-gray-900 text-white rounded-md border border-gray-700 focus:outline-none focus:border-amber-400"
               />
             </div>
@@ -182,7 +205,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="pt-8 border-t border-gray-700">
-            <h4 className="text-2xl font-semibold text-white mb-6 text-center">Follow My Journey</h4>
+            <h4 className="text-2xl font-semibold text-white mb-6 text-center">Follow Our Journey</h4>
             <div className="flex gap-6 justify-center">
               {socialLinks.map((social, index) => (
                 <a
