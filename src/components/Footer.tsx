@@ -26,7 +26,6 @@ const Footer = () => {
         {/* "Built with" text block */}
         <div className="mt-6 pt-6 border-t border-gray-800"> {/* text-center removed here, moved to parent container */}
           <p className="text-gray-500 text-sm">
-            Built with React.js & Tailwind CSS
           </p>
         </div>
       </div>

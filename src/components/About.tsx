@@ -11,7 +11,7 @@ const About = () => {
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Sales Efficiency",
-      description: "Helped startups increase sales efficiency by almost 50%"
+      description: "Helped startups increase sales efficiently"
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -39,9 +39,7 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto mb-16">
           <p className="text-lg text-gray-400 leading-relaxed text-center">
-            We have a proven track record of helping multiple startups increase their sales efficiency 
-            by almost 50% by implementing effective, data-driven strategies. Our specialty is reviving 
-            brands and helping them grow and scale in today's competitive digital landscape.
+We have a proven track record of helping multiple startups significantly increase their sales efficiency by implementing effective, data-driven strategies. Our specialty is reviving brands and helping them grow and scale in today's competitive digital landscape.
           </p>
         </div>
 

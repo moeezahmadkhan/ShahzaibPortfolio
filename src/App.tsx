@@ -8,6 +8,7 @@ import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Services from './components/Services'; // Import the new Samples component
+import Terms from './components/Terms.tsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       {/* <Skills /> */}
       <Certifications />
       <Contact />
+      <Terms/>
       <Footer />
     </div>
   );

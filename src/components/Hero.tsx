@@ -47,8 +47,7 @@ const Hero: React.FC = () => {
 
         <div className="max-w-4xl mx-auto">
           <p className="text-xl text-gray-300 leading-relaxed mb-8">
-RS Agency : 5+ Years of Turning Startups Into Sales Machines.
-We don’t just market, we weaponize data to boost growth by up to 50%. </p>
+RS Agency: 5+ Years of Turning Startups Into Sales Machines. We don’t just market, we weaponize data to drive significant growth. </p>
 
           <a
             href={whatsappLink}
