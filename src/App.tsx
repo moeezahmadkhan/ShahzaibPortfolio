@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Services from './components/Services'; // Import the new Samples component
 import Terms from './components/Terms.tsx';
+import PrivacyPolicy from './components/PrivacyPolicy.tsx';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Certifications />
       <Contact />
       <Terms/>
+      <PrivacyPolicy/>
       <Footer />
     </div>
   );
